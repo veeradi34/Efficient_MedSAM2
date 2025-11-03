@@ -24,10 +24,6 @@ Installation
    python -m venv .venv
    .\.venv\Scripts\activate
 
-2. Install Python dependencies:
-
-   pip install -r requirements.txt
-
 Python 3.8 or newer is recommended. For GPU acceleration, install a CUDA-compatible PyTorch build.
 
 Streamlit (interactive) usage
@@ -41,18 +37,6 @@ Streamlit (interactive) usage
 
 3. In the sidebar: select a student checkpoint (for example `student_finetuned_full.pt` or `best_student_prompt_full.pt`), upload an input image, and draw or enter a bounding box to run prompt-based segmentation. Use the Reload Models button after adding or replacing checkpoint files in the working directory.
 
-Command-line usage
-------------------
-
-Run the CLI tool to perform scripted inference and save results:
-
-   python cli_assessment.py --image PATH_TO_IMAGE --bbox X1 Y1 X2 Y2 --output results/
-
-Common options:
-- `--image`: Path to an RGB input image.
-- `--bbox`: Bounding box coordinates in pixels: `x1 y1 x2 y2`.
-- `--output`: Output directory for masks and comparison images.
-- `--device`: `cpu` or `cuda` (auto-detected by default).
 
 Models and checkpoints
 ----------------------
