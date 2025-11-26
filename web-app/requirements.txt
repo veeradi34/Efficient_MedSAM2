@@ -1,0 +1,55 @@
+# Efficient MedSAM2 Web Application - Production Requirements
+# ===========================================================
+
+# Core Streamlit and web framework
+streamlit>=1.28.0
+streamlit-option-menu>=0.3.6
+
+# Machine Learning and Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+
+# Image Processing
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+pydicom>=2.4.0
+
+# Data Visualization
+matplotlib>=3.7.0
+plotly>=5.15.0
+
+# Authentication and Database
+sqlite3  # Built into Python
+bcrypt>=4.0.0
+cryptography>=41.0.0
+
+# System Monitoring
+psutil>=5.9.0
+
+# Scientific Computing
+scipy>=1.11.0
+scikit-image>=0.21.0
+
+# Utilities
+python-dateutil>=2.8.2
+pathlib  # Built into Python
+io  # Built into Python
+time  # Built into Python
+os  # Built into Python
+sys  # Built into Python
+hashlib  # Built into Python
+secrets  # Built into Python
+sqlite3  # Built into Python
+json  # Built into Python
+re  # Built into Python
+threading  # Built into Python
+queue  # Built into Python
+tracemalloc  # Built into Python
+
+# Development and Deployment (optional)
+streamlit-authenticator>=0.2.3
+streamlit-lottie>=0.0.3
+
+# Production Server (for deployment)
+gunicorn>=21.2.0

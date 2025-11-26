@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  efficient-medsam2:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_PATH=/app/data/users.db
+      - MODEL_BASE_PATH=/app/models
+      - SECRET_KEY=your-production-secret-key-here
+      - MAX_FILE_SIZE_MB=50
+    volumes:
+      - ./models:/app/models:ro
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  app_data:
+  app_logs:
