@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="description" content="Professional Medical Image Segmentation Platform" />
+    
+    <title>MedSeg Professional</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Professional Medical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for professional appearance -->
+    <meta name="keywords" content="medical imaging, AI segmentation, healthcare technology, medical analysis">
+    <meta name="author" content="MedSeg Professional Team">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="MedSeg Professional - Medical Image Segmentation">
+    <meta property="og:description" content="Advanced AI-powered medical image segmentation platform">
+    <meta property="og:type" content="website">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  </head>
+  <body>
+    <noscript>
+      <div style="
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        font-family: Inter, sans-serif; 
+        background: #f8fafc; 
+        color: #374151;
+        text-align: center;
+        padding: 20px;
+      ">
+        <div>
+          <h1 style="color: #1e40af; margin-bottom: 16px;">MedSeg Professional</h1>
+          <p>JavaScript is required to run this medical imaging application.</p>
+          <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
+            Please enable JavaScript in your browser to continue.
+          </p>
+        </div>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
